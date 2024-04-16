@@ -1,0 +1,38 @@
+[
+    {
+        "donationId": "erekjrhiueire",
+        "churchId":"qekzuriezyrbuyhbruybdhf",
+        "firstName": "John",
+        "lastName": "Songolo",
+        "donationDate": "2023-03-10",
+        "amount": 5000,
+        "currency": "USD",
+        "rate": 1,
+        "country": "DR Congo",
+        "email": "songolo.pakala@gmail.com"
+    },
+    {
+        "donationId": "kfsoufiriuizu",
+        "churchId":"qekzuriezyrbuyhbruybdhf",
+        "firstName": "Jires",
+        "lastName": "Pakala",
+        "donationDate": "2023-03-10",
+        "amount": 100000,
+        "currency": "CDF",
+        "rate": 2800,
+        "country": "DR Congo",
+        "email": "songolo.jires@gmail.com"
+    },
+    {
+        "donationId": "dzjirudskjkjsf",
+        "churchId":"qekzuriezyrbuyhbruybdhf",
+        "firstName": "John",
+        "lastName": "Songolo",
+        "donationDate": "2023-03-10",
+        "amount": 5000,
+        "currency": "USD",
+        "rate": 1,
+        "country": "DR Congo",
+        "email": "songolo.pakala@gmail.com"
+    }
+]
