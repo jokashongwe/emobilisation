@@ -35,7 +35,7 @@ export default function PublicLayout(props) {
                     </Link>
                     <Link
                         className="text-sm font-medium hover:underline underline-offset-4"
-                        href="#">
+                        href="/books">
                         Librairie
                     </Link>
                 </nav>

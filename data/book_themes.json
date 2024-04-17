@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Discipolat",
+        "code": "DISCIPOLAT"
+    },
+    {
+        "name": "Mariage",
+        "code": "WEDDING"
+    },
+    {
+        "name": "Education",
+        "code": "EDUCATION"
+    },
+    {
+        "name": "Succès",
+        "code": "SUCCESS"
+    },
+    {
+        "name": "Entreprenariat",
+        "code": "ENTREPRENEURSHIP"
+    }
+]
