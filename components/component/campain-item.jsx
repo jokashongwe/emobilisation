@@ -6,7 +6,7 @@ import Link from "next/link";
 export function CampaignItem({ campaign }) {
   const percentage = Math.round(((campaign.current / campaign.amount) * 100))
   return (
-    (<Card className="w-full max-w-md overflow-hidden">
+    (<Card className="w-full max-w-md overflow-hidden hover:scale-105 transition-transform cursor-pointer">
       <CardHeader className="p-0 overflow-hidden" >
         <img
           alt="logo"

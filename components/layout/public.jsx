@@ -7,7 +7,7 @@ export default function PublicLayout(props) {
     return (
         <div className="flex flex-col min-h-[100dvh]">
             <header className="px-4 lg:px-6 h-14 flex items-center my-3">
-                <div className="flex items-center justify-center">
+                <Link href="/" className="flex items-center justify-center">
                     <img
                         alt="logo"
                         className="mx-2 aspect-video overflow-hidden rounded-xl object-contain object-contain"
@@ -16,16 +16,16 @@ export default function PublicLayout(props) {
                         width="180" />
 
                     <span className="sr-only">{name}</span>
-                </div>
+                </Link>
                 <nav className="ml-auto flex gap-4 sm:gap-6">
                     <Link
                         className="text-sm font-medium hover:underline underline-offset-4"
-                        href="#">
+                        href="/">
                         Accueil
                     </Link>
                     <Link
                         className="text-sm font-medium hover:underline underline-offset-4"
-                        href="#">
+                        href="/campaigns">
                         Donations
                     </Link>
                     <Link
@@ -44,7 +44,7 @@ export default function PublicLayout(props) {
                 {children}
             </main>
             <footer
-                className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6">
+                className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center border-t px-4 md:px-6">
                 <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 {name}. All rights reserved.</p>
                 <nav className="sm:ml-auto flex gap-4 sm:gap-6">
                     <Link className="text-xs hover:underline underline-offset-4" href="#">
