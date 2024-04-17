@@ -58,7 +58,7 @@ export async function updateSession(request, protectedRoutes, publicRoutes) {
     const isProtectedRoute = protectedRoutes.includes(path)
     const isPublicRoute = publicRoutes.includes(path)
 
-    console.log("isProtectedRoute: ", isProtectedRoute)
+    //console.log("isProtectedRoute: ", isProtectedRoute)
 
     // refreshing the auth token
     const { data } = await supabase.auth.getUser()
