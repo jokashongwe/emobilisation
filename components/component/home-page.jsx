@@ -55,11 +55,12 @@ export function HomePage(props) {
               </div>
             </div>
           </div>
-          <div>
+          <div className="invisible md:visible" >
             <p className="max-w-[600px] text-gray-500 md:text-md dark:text-gray-400">
               {"Nous serons heureux de vous rencontrer, de nous édifier mutuellement et partager nos dons au nom de Jésus-Christ. Le seigneur Jésus-Christ nous a mandaté pour porter l’évangile à tous, édifier l'assemblé du Christ et paitre ses brebis cependant les ressources humaines étant limitées, la file d’attente pourrait être longue alors nous vous prions d’être patient."}
-              <br /><br />{"Pour plus d'information, contactez-nous au"} {church.phone} {"ou ecrivez nous à l'adresse email"} <strong>{church.email}</strong>
             </p>
+            <br />
+            <p className="max-w-[600px] text-gray-500 md:text-md dark:text-gray-400" >{"Pour plus d'information, contactez-nous au"} {church.phone} {"ou ecrivez nous à l'adresse email"} <strong>{church.email}</strong></p>
           </div>
         </div>
       </section>
@@ -72,7 +73,7 @@ export function HomePage(props) {
         </div>
         <div className="container px-4 md:px-6 md:my-8 lg:my-10 lg:px-6">
           <div className="mx-auto max-w-5xl items-center">
-            <ul className="grid grid-cols-3 gap-6">
+            <ul className="grid md:grid-cols-3 md:gap-6 grid-cols-1 gap-3 ">
               {campaigns && campaigns.map(camp => <CampaignItem key={camp.campaignId} campaign={camp} />)}
             </ul>
           </div>
