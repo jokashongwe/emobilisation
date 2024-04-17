@@ -1,8 +1,12 @@
 import { updateSession } from '@/utils/supabase/middleware'
 
-export async function middleware(request) {
-    // update user's auth session
-    return await updateSession(request)
+// 1. Specify protected and public routes
+const protectedRoutes = ['/admin']
+const publicRoutes = ['/login', '/signup', '/']
+
+export default async function middleware(req) {
+    
+    return await updateSession(req, protectedRoutes, publicRoutes)
 }
 
 export const config = {
