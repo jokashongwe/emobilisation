@@ -43,7 +43,7 @@ export function HomePage(props) {
                   Soutenir la mission de notre église
                 </h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Votre don nous aide à servir la communauté et à répandre l'amour et la compassion. Nous vous remercions de votre générosité.
+                  {"Votre don nous aide à servir la communauté et à répandre l'amour et la compassion. Nous vous remercions de votre générosité."}
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -57,10 +57,8 @@ export function HomePage(props) {
           </div>
           <div>
             <p className="max-w-[600px] text-gray-500 md:text-md dark:text-gray-400">
-              Nous serons heureux de vous rencontrer, de nous édifier mutuellement et partager nos dons au nom de Jésus-Christ.
-              Le seigneur Jésus-Christ nous a mandaté pour porter l’évangile à tous, édifier l’assemblé du Christ et paitre ses brebis cependant
-              les ressources humaines étant limitées, la file d’attente pourrait être longue alors nous vous prions d’être patient.
-              <br /><br />Pour plus d'information, contactez-nous au {church.phone} ou ecrivez nous à l'adresse email <strong>{church.email}</strong>
+              {"Nous serons heureux de vous rencontrer, de nous édifier mutuellement et partager nos dons au nom de Jésus-Christ. Le seigneur Jésus-Christ nous a mandaté pour porter l’évangile à tous, édifier l'assemblé du Christ et paitre ses brebis cependant les ressources humaines étant limitées, la file d’attente pourrait être longue alors nous vous prions d’être patient."}
+              <br /><br />{"Pour plus d'information, contactez-nous au"} {church.phone} {"ou ecrivez nous à l'adresse email"} <strong>{church.email}</strong>
             </p>
           </div>
         </div>

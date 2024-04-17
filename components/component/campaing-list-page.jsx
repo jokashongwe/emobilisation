@@ -11,7 +11,7 @@ export function CampaingListPage({ church, campaigns }) {
           className="text-3xl text-center font-bold tracking-tighter sm:text-4xl xl:text-5xl/none">
           Campagnes en cours
         </h1>
-        <p className="text-sm text-center my-2 text-gray-500" >Que votre générosité soit vue et récompensée de l'Eternel</p>
+        <p className="text-sm text-center my-2 text-gray-500" >{"Que votre générosité soit vue et récompensée de l'Eternel"}</p>
       </div>
       <div
         className="grid max-w-5xl gap-6 px-4 mx-auto lg:px-6 md:grid-cols-2 lg:grid-cols-3">
