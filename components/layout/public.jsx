@@ -28,11 +28,7 @@ export default function PublicLayout(props) {
                         href="/campaigns">
                         Donations
                     </Link>
-                    <Link
-                        className="text-sm font-medium hover:underline underline-offset-4"
-                        href="#">
-                        Rendez-vous
-                    </Link>
+
                     <Link
                         className="text-sm font-medium hover:underline underline-offset-4"
                         href="/books">
