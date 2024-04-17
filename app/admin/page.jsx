@@ -45,11 +45,11 @@ export default function AdminHome() {
 
   return (
     <AdminLayout active={"home"} church={church}>
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
         <Card>
           <div className="flex flex-col py-3 gap-6 md:flex-row md:items-center md:gap-0">
             <CardContent className="grid gap-1">
-              <CardTitle className="text-lg text-gray-400">Donations</CardTitle>
+              <CardTitle className="text-lg text-gray-400">Dons</CardTitle>
               <p className="text-3xl font-bold text-blue-500">$25,000</p>
             </CardContent>
           </div>
@@ -65,8 +65,8 @@ export default function AdminHome() {
         <Card>
           <div className="flex flex-col py-3 gap-6 md:flex-row md:items-center md:gap-0">
             <CardContent className="grid gap-1">
-              <CardTitle className="text-lg text-gray-400">Signalement</CardTitle>
-              <p className="text-3xl font-bold text-blue-500">580</p>
+              <CardTitle className="text-lg text-gray-400">Campagnes</CardTitle>
+              <p className="text-3xl font-bold text-blue-500">3</p>
             </CardContent>
           </div>
         </Card>

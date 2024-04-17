@@ -3,6 +3,7 @@ import { useState } from "react";
 import churches from "@/data/churches.json"
 import defaultCampaings from "@/data/campaigns.json"
 import defaultDonations from "@/data/donations.json"
+import defaultDonors from "@/data/donors.json"
 import AdminLayout from "@/components/layout/admin";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -18,6 +19,7 @@ export default function AdminCampaign(props) {
     const [church, setChurch] = useState(null);
     const [campaign, setCampaign] = useState(null)
     const [donations, setDonations] = useState([])
+    const [donors, setDonors] = useState([])
     const { id } = props.params;
     setTimeout(function () {
         const resultChurch = churches[0]
@@ -28,6 +30,8 @@ export default function AdminCampaign(props) {
 
         const ourDonations = defaultDonations.filter(donation => donation.campaignId == id);
         setDonations(ourDonations);
+
+        setDonors(defaultDonors);
 
     }, 2000);
 
@@ -83,7 +87,7 @@ export default function AdminCampaign(props) {
                         />
                     </div>
                     <div className="flex flex-col gap-1">
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                             <div>
                                 <div className="text-sm  text-gray-500 font-semibold">OBJECTIF</div>
                                 <div className="text-2xl text-blue-600 font-bold">{campaign.currencySign} {campaign.amount} </div>
@@ -118,10 +122,57 @@ export default function AdminCampaign(props) {
                             </TableRow>
                         </TableHeader>
                         <TableBody>
-                            {donations && donations.map(donation => (<TableRow key={donation.donationId} >
+                            {donations && donations.map((donation, index) => (<TableRow key={donation.donationId + index} >
                                 <TableCell className="font-medium text-left">{donation.firstName} {donation.lastName}</TableCell>
                                 <TableCell className="text-right">{donation.currencySign} {donation.amount}</TableCell>
                                 <TableCell className="text-right">{donation.paymentMode}</TableCell>
+                                <TableCell className="text-right">{donation.country}</TableCell>
+                                <TableCell className="text-right">
+                                    <Badge variant={donation.status}>
+                                        {donation.statusLabel}
+                                    </Badge>
+                                </TableCell>
+                            </TableRow>))
+                            }
+                        </TableBody>
+                    </Table>
+                    <div className="ml-auto flex items-center gap-2">
+                        <Button size="icon" variant="outline">
+                            <ChevronLeftIcon className="h-4 w-4" />
+                            <span className="sr-only">Previous</span>
+                        </Button>
+                        <p className="tracking-wider" >1 2 3 4 5 7</p>
+                        <Button size="icon" variant="outline">
+                            <ChevronRightIcon className="h-4 w-4" />
+                            <span className="sr-only">Next</span>
+                        </Button>
+                    </div>
+                </CardContent>
+            </Card>
+            <Card>
+                <CardHeader style={{ "justifyContent": "space-between" }} className="my-3 flex flex-row items-center space-x-10" >
+                    <CardTitle>Donateurs</CardTitle>
+                    <div style={{marginRight: "2rem"}} className="max-w-[8rem] mr-5">
+                        <Button>
+                            Envoyer un rappel
+                        </Button>
+                    </div>
+
+                </CardHeader>
+                <CardContent>
+                    <Table>
+                        <TableHeader>
+                            <TableRow>
+                                <TableHead className="text-left">Nom</TableHead>
+                                <TableHead className="text-right">Montant</TableHead>
+                                <TableHead className="text-right">Pays</TableHead>
+                                <TableHead className="text-right">Status</TableHead>
+                            </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                            {donors && donors.map((donation, index) => (<TableRow key={donation.donationId + index} >
+                                <TableCell className="font-medium text-left">{donation.firstName} {donation.lastName}</TableCell>
+                                <TableCell className="text-right">{donation.currencySign} {donation.amount}</TableCell>
                                 <TableCell className="text-right">{donation.country}</TableCell>
                                 <TableCell className="text-right">
                                     <Badge variant={donation.status}>
