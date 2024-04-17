@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import PublicLayout from "../layout/public";
+import Link from "next/link";
 
 export function CampaingListPage({ church, campaigns }) {
   return (
@@ -32,11 +33,11 @@ export function CampaingListPage({ church, campaigns }) {
               <h3 className="text-xl font-semibold tracking-tight">{camp.name}</h3>
               <p className="text-sm line-clamp-3">{camp.short}</p>
             </div>
-            <div className="grid w-full p-4 items-center">
+            <Link href={"/campaigns/" + camp.campaignId} className="grid w-full p-4 items-center">
               <Button className="w-full justify-start" variant="default">
                 En savoir plus
               </Button>
-            </div>
+            </Link>
           </div>
         ))}
 
