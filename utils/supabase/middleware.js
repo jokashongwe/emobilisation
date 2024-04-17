@@ -69,9 +69,9 @@ export async function updateSession(request, protectedRoutes, publicRoutes) {
     }
 
     if (
-        isPublicRoute &&
+        isProtectedRoute &&
         user &&
-        !request.nextUrl.pathname.startsWith('/admin')
+        request.nextUrl.pathname.startsWith('/admin')
     ) {
         return NextResponse.redirect(new URL('/admin', request.nextUrl))
     }

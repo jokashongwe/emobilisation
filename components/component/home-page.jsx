@@ -74,7 +74,7 @@ export function HomePage(props) {
         <div className="container px-4 md:px-6 md:my-8 lg:my-10 lg:px-6">
           <div className="mx-auto max-w-5xl items-center">
             <ul className="grid md:grid-cols-3 md:gap-6 grid-cols-1 gap-3 ">
-              {campaigns && campaigns.map(camp => <CampaignItem key={camp.campaignId} campaign={camp} />)}
+              {campaigns && campaigns.map(camp => <CampaignItem key={camp.id} campaign={camp} />)}
             </ul>
           </div>
         </div>

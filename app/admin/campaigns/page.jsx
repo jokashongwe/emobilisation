@@ -65,7 +65,7 @@ export default function AdminCampaign() {
                         </TableHeader>
                         <TableBody className="divide-y">
                             {campaings && campaings.map(content => (
-                                <TableRow key={content.campaignId} className="hover:bg-gray-100 dark:hover:bg-gray-900">
+                                <TableRow key={content.id} className="hover:bg-gray-100 dark:hover:bg-gray-900">
                                     <TableCell className="font-semibold">{content.name}</TableCell>
                                     <TableCell>{content.amount} {content.currencySign}</TableCell>
                                     <TableCell>{content.current} {content.currencySign}</TableCell>
@@ -78,12 +78,12 @@ export default function AdminCampaign() {
                                     <TableCell>{content.startDate}</TableCell>
                                     <TableCell>{content.endDate}</TableCell>
                                     <TableCell>
-                                        <Link href={"/admin/campaigns/" + content.campaignId} >
+                                        <Link href={"/admin/campaigns/" + content.id} >
                                             <Button variant="outline">
                                                 Voir
                                             </Button>
                                         </Link>
-                                        <Link className="mx-2" href={"/admin/campaigns/" + content.campaignId} >
+                                        <Link className="mx-2" href={"/admin/campaigns/" + content.id} >
                                             <Button variant="outline">
                                                 Modifier
                                             </Button>

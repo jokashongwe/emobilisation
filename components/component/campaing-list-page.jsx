@@ -19,7 +19,7 @@ export function CampaingListPage({ campaigns, header }) {
         className="grid max-w-5xl gap-6 px-4 mx-auto lg:px-6 md:grid-cols-2 lg:grid-cols-3">
         {campaigns && campaigns.map(camp => (
           <div
-            key={camp.campaignId}
+            key={camp.id}
             className="flex flex-col rounded-lg overflow-hidden border border-gray-300 shadow-sm cursor-pointer hover:scale-105 transition-transform dark:border-gray-800 dark:border-gray-800">
             <div className="relative">
               <img
@@ -36,7 +36,7 @@ export function CampaingListPage({ campaigns, header }) {
               <h3 className="text-xl font-semibold tracking-tight">{camp.name}</h3>
               <p className="text-sm line-clamp-3">{camp.short}</p>
             </div>
-            <Link href={"/campaigns/" + camp.campaignId} className="grid w-full p-4 items-center">
+            <Link href={"/campaigns/" + camp.id} className="grid w-full p-4 items-center">
               <Button className="w-full justify-start" variant="default">
                 En savoir plus
               </Button>
