@@ -1,0 +1,18 @@
+[
+    {
+        "contentId": "slfjskfjdkfjkdjfdkjdfj",
+        "name": "home",
+        "label": "Page d'Accueil",
+        "path": "/",
+        "heading": "Soutenir la mission de notre église",
+        "subheading": "Votre don nous aide à servir la communauté et à répandre l'amour et la compassion. Nous vous remercions de votre générosité.",
+        "action": {
+            "name": "Faire un don",
+            "path": "/donate"
+        },
+        "detail": "Nous serons heureux de vous rencontrer, de nous édifier mutuellement et partager nos dons au nom de Jésus-Christ. Le seigneur Jésus-Christ nous a mandaté pour porter l’évangile à tous, édifier l'assemblé du Christ et paitre ses brebis cependant les ressources humaines étant limitées, la file d’attente pourrait être longue alors nous vous prions d’être patient",
+        "contactPhone": "Pour plus d'information, contactez-nous au ",
+        "contactEmail": "ou ecrivez nous à l'adresse email ",
+        "publishDate": "2024-04-17"
+    }
+]

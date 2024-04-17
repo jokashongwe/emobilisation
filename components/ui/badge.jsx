@@ -10,6 +10,12 @@ const badgeVariants = cva(
       variant: {
         default:
           "border-transparent bg-gray-900 text-gray-50 hover:bg-gray-900/80 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/80",
+        success:
+          "border-transparent bg-green-500 text-green-50 hover:bg-green-900/80 dark:bg-green-50 dark:text-green-900 dark:hover:bg-green-50/80",
+        paid:
+          "border-transparent bg-green-500 text-green-50 hover:bg-green-900/80 dark:bg-green-50 dark:text-green-900 dark:hover:bg-green-50/80",
+        waiting:
+          "border-transparent bg-yellow-500 text-yellow-50 hover:bg-yellow-900/80 dark:bg-yellow-50 dark:text-yellow-900 dark:hover:bg-yellow-50/80",
         secondary:
           "border-transparent bg-gray-100 text-gray-900 hover:bg-gray-100/80 dark:bg-gray-800 dark:text-gray-50 dark:hover:bg-gray-800/80",
         destructive:
