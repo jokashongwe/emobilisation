@@ -13,7 +13,7 @@ export default function AdminLayout(props) {
             <header className="flex items-center h-16 px-4 bg-gray-100 border-b shrink-0 md:px-6">
                 <Link
                     className="flex items-center gap-2 text-lg font-semibold md:text-base"
-                    href="#">
+                    href="/admin">
                     <img
                         alt="logo"
                         className="mx-2 aspect-video overflow-hidden rounded-xl object-contain object-contain"
