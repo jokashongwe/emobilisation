@@ -2,11 +2,13 @@ import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import { CardContent, Card, CardHeader } from "@/components/ui/card"
 import Link from "next/link";
+import { useRouter } from 'next/navigation'
 
 export function CampaignItem({ campaign }) {
-  const percentage = Math.round(((campaign.current / campaign.amount) * 100))
+  const percentage = Math.round(((campaign.current / campaign.amount) * 100));
+  const router = useRouter()
   return (
-    (<Card className="w-full max-w-md overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+    (<Card onClick={() => router.push('/campaigns/' + campaign.campaignId)} className="w-full max-w-md overflow-hidden hover:scale-105 transition-transform cursor-pointer">
       <CardHeader className="p-0 overflow-hidden" >
         <img
           alt="logo"
