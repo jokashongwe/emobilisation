@@ -17,6 +17,7 @@ export function CampaingListPage({ church, campaigns }) {
         className="grid max-w-5xl gap-6 px-4 mx-auto lg:px-6 md:grid-cols-2 lg:grid-cols-3">
         {campaigns && campaigns.map(camp => (
           <div
+            key={camp.campaignId}
             className="flex flex-col rounded-lg overflow-hidden border border-gray-300 shadow-sm cursor-pointer hover:scale-105 transition-transform dark:border-gray-800 dark:border-gray-800">
             <div className="relative">
               <img

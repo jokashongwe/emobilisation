@@ -27,8 +27,8 @@ export function BookstorePage({ church, books, themes }) {
         <div
           className="bg-gray-100 lg:bg-white p-4 lg:grid-cols-1 flex flex-col gap-4">
           <div className="grid md:grid-cols-3 gap-4">
-            {books && books.map(book => (
-              <Card className="grid overflow-hidden">
+            {books && books.map((book, index) => (
+              <Card key={"book" + index} className="grid overflow-hidden">
                 <Link href="#">
                   <CardHeader className="p-0" >
                     <img
