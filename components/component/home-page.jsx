@@ -7,7 +7,7 @@ import { CampaignItem } from "./campain-item";
 import PublicLayout from "../layout/public";
 
 export function HomePage(props) {
-  const { church, campaigns } = props;
+  const { church, campaigns, content } = props;
 
   const RenderCampaign = ({ campaign }) => {
     if (!campaign) return null;
@@ -40,7 +40,7 @@ export function HomePage(props) {
               <div className="space-y-3">
                 <h1
                   className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  Soutenir la mission de notre église
+                  {content.heading}
                 </h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
                   {"Votre don nous aide à servir la communauté et à répandre l'amour et la compassion. Nous vous remercions de votre générosité."}
@@ -49,18 +49,18 @@ export function HomePage(props) {
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link
                   className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                  href="#">
-                  Faire un don
+                  href={content.action.path}>
+                  {content.action.name}
                 </Link>
               </div>
             </div>
           </div>
           <div className="invisible md:visible" >
             <p className="max-w-[600px] text-gray-500 md:text-md dark:text-gray-400">
-              {"Nous serons heureux de vous rencontrer, de nous édifier mutuellement et partager nos dons au nom de Jésus-Christ. Le seigneur Jésus-Christ nous a mandaté pour porter l’évangile à tous, édifier l'assemblé du Christ et paitre ses brebis cependant les ressources humaines étant limitées, la file d’attente pourrait être longue alors nous vous prions d’être patient."}
+              {content.detail}  
             </p>
             <br />
-            <p className="max-w-[600px] text-gray-500 md:text-md dark:text-gray-400" >{"Pour plus d'information, contactez-nous au"} {church.phone} {"ou ecrivez nous à l'adresse email"} <strong>{church.email}</strong></p>
+            <p className="max-w-[600px] text-gray-500 md:text-md dark:text-gray-400" >{content.contactPhone} {church.phone} {content.contactEmail} <strong>{church.email}</strong></p>
           </div>
         </div>
       </section>

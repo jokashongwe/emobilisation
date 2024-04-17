@@ -3,16 +3,18 @@ import { Button } from "@/components/ui/button"
 import PublicLayout from "../layout/public";
 import Link from "next/link";
 
-export function CampaingListPage({ church, campaigns }) {
+export function CampaingListPage({ campaigns, header }) {
   return (
-    <PublicLayout logo={church.logo} name={church.name} >
-      <div className="my-6 px-4 md:my-8 lg:my-10 lg:px-6" >
-        <h1
-          className="text-3xl text-center font-bold tracking-tighter sm:text-4xl xl:text-5xl/none">
-          Campagnes en cours
-        </h1>
-        <p className="text-sm text-center my-2 text-gray-500" >{"Que votre générosité soit vue et récompensée de l'Eternel"}</p>
-      </div>
+    <>
+      {header ? (
+        <div className="my-6 px-4 md:my-8 lg:my-10 lg:px-6" >
+          <h1
+            className="text-3xl text-center font-bold tracking-tighter sm:text-4xl xl:text-5xl/none">
+            Campagnes en cours
+          </h1>
+          <p className="text-sm text-center my-2 text-gray-500" >{"Que votre générosité soit vue et récompensée de l'Eternel"}</p>
+        </div>
+      ) : null}
       <div
         className="grid max-w-5xl gap-6 px-4 mx-auto lg:px-6 md:grid-cols-2 lg:grid-cols-3">
         {campaigns && campaigns.map(camp => (
@@ -43,6 +45,6 @@ export function CampaingListPage({ church, campaigns }) {
         ))}
 
       </div>
-    </PublicLayout>
+    </>
   );
 }
