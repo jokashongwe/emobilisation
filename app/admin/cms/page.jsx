@@ -62,7 +62,7 @@ export default function AdminHome() {
                         </TableHeader>
                         <TableBody className="divide-y">
                             {contents && contents.map(content => (
-                                <TableRow className="hover:bg-gray-100 dark:hover:bg-gray-900">
+                                <TableRow key={content.contentId} className="hover:bg-gray-100 dark:hover:bg-gray-900">
                                     <TableCell className="font-semibold">{content.label}</TableCell>
                                     <TableCell>{content.path}</TableCell>
                                     <TableCell>{content.publishDate}</TableCell>

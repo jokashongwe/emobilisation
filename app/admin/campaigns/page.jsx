@@ -65,7 +65,7 @@ export default function AdminCampaign() {
                         </TableHeader>
                         <TableBody className="divide-y">
                             {campaings && campaings.map(content => (
-                                <TableRow className="hover:bg-gray-100 dark:hover:bg-gray-900">
+                                <TableRow key={content.campaignId} className="hover:bg-gray-100 dark:hover:bg-gray-900">
                                     <TableCell className="font-semibold">{content.name}</TableCell>
                                     <TableCell>{content.amount} {content.currencySign}</TableCell>
                                     <TableCell>{content.current} {content.currencySign}</TableCell>

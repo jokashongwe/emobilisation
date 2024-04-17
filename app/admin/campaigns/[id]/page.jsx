@@ -80,13 +80,19 @@ export default function AdminCampaign(props) {
                             className="aspect-video w-full rounded-xl overflow-hidden object-contain object-contain"
                             height="300"
                             src={campaign.photo}
-                            />
+                        />
                     </div>
                     <div className="flex flex-col gap-1">
-                        <div className="text-sm  text-gray-500 font-semibold">OBJECTIF</div>
-                        <div className="text-2xl text-blue-400 font-bold">{campaign.currencySign} {campaign.amount} </div>
-                        <div className="text-sm  text-gray-500 font-semibold">MONTANT ATTEINT</div>
-                        <div className="text-2xl text-gray-700 font-bold">{campaign.currencySign} {campaign.current} </div>
+                        <div className="grid grid-cols-2 gap-3">
+                            <div>
+                                <div className="text-sm  text-gray-500 font-semibold">OBJECTIF</div>
+                                <div className="text-2xl text-blue-600 font-bold">{campaign.currencySign} {campaign.amount} </div>
+                            </div>
+                            <div>
+                                <div className="text-sm  text-gray-500 font-semibold">MONTANT ATTEINT</div>
+                                <div className="text-2xl text-gray-700 font-bold">{campaign.currencySign} {campaign.current} </div>
+                            </div>
+                        </div>
                         <div className="my-4" >
                             <Progress className="flex-1 h-2" value={Math.round((campaign.current / campaign.amount) * 100)} />
                         </div>

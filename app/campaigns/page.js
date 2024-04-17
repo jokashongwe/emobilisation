@@ -5,6 +5,7 @@ import { useState } from "react";
 import churches from "@/data/churches.json"
 import defaultCampaings from "@/data/campaigns.json"
 import { CampaingListPage } from "@/components/component/campaing-list-page";
+import PublicLayout from "@/components/layout/public";
 
 export default function Home() {
   const [church, setChurch] = useState(null);
