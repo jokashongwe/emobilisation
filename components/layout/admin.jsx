@@ -29,17 +29,18 @@ export default function AdminLayout(props) {
                     <Link className={(active == "campaign") ? "font-bold text-gray-800 text-sm dark:text-gray-400" : " font-normal text-gray-500 text-sm dark:text-gray-400"} href="/admin/campaigns">
                         Campagnes
                     </Link>
-                    <Link className={(active == "signals") ? "font-bold text-gray-800 text-sm dark:text-gray-400" : " font-normal text-gray-500 text-sm dark:text-gray-400"} href="/admin/signals">
+                    {/* <Link className={(active == "signals") ? "font-bold text-gray-800 text-sm dark:text-gray-400" : " font-normal text-gray-500 text-sm dark:text-gray-400"} href="/admin/signals">
                         Signalement
-                    </Link>
-                    <Link className={(active == "settings") ? "font-bold text-gray-800 text-sm dark:text-gray-400" : " font-normal text-gray-500 text-sm dark:text-gray-400"} href="/settings">
-                        Paramètres
-                    </Link>
+                    </Link> */}
                     <Link className={(active == "cms") ? "font-bold text-gray-800 text-sm dark:text-gray-400" : " font-normal text-gray-500 text-sm dark:text-gray-400"} href="/admin/cms">
                         CMS
                     </Link>
+                    <Link className={(active == "settings") ? "font-bold text-gray-800 text-sm dark:text-gray-400" : " font-normal text-gray-500 text-sm dark:text-gray-400"} href="/admin/settings">
+                        Paramètres
+                    </Link>
+                    
                 </nav>
-                <div className="flex items-center w-full gap-4 md:ml-auto md:gap-2 lg:gap-4">
+                <div className="flex items-center hidden md:visible w-full gap-4 md:ml-auto md:gap-2 lg:gap-4">
                     <form className="flex-1 ml-auto sm:flex-initial">
                         <div className="relative">
                             <SearchIcon
